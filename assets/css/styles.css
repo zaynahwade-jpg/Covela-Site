@@ -38,7 +38,6 @@ img{max-width:100%;height:auto;display:block}
   cursor: pointer;
 }
 
-
 /* Hero Section */
 .hero {
 position: relative;
@@ -53,7 +52,9 @@ align-items: center;
 justify-content: center;
 text-align: center;
 
+color: var(--white);
 padding: 0 20px;
+
 z-index: 0;
 }
 
@@ -64,7 +65,6 @@ position: absolute;
 inset: 0;
 background: rgba(21, 69, 77, 0.6);
 z-index: 1;
-pointer-events: none;
 }
 
 /* Text + buttons (top layer) */
@@ -132,13 +132,11 @@ max-width: 1200px;
 margin: 0 auto;
 padding: 24px;
 }
-.hero,
-.hero * {
-  color: white;
-}
+
 .section {
 padding: 40px 0;
 }
+
 /* Cards and grids */
 .card{border:1px solid var(--border);border-radius:12px;background:#fff;padding:16px}
 .grid{display:grid;gap:16px}
