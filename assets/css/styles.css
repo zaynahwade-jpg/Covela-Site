@@ -128,6 +128,32 @@ transition: all 0.2s ease;
   padding: 20px;
   text-align: left;
 }
+.role-signup-box {
+  background-color: var(--teal); /* turquoise / teal background */
+  border-radius: 20px;           /* rounded corners */
+  padding: 40px 30px;            /* spacing inside */
+  max-width: 600px;               /* optional: keep box narrow */
+  margin: 0 auto;                 /* center the box */
+  text-align: center;             /* center all text inside */
+  color: var(--white);            /* white text for contrast */
+}
+
+/* Style buttons inside the box */
+.role-signup-box .button.primary {
+  background-color: var(--white); /* white buttons */
+  color: var(--teal);             /* text matches box color */
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.role-signup-box .button.primary:hover {
+  background-color: var(--teal-light); /* slightly lighter teal on hover */
+  color: var(--white);
+  transform: translateY(-2px);
+}
 
 /* Role signup button group */
 .button-group {
