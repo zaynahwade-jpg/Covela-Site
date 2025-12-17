@@ -34,24 +34,21 @@ nav .menu {
 
 /* Hero Section */
 .hero {
-  /* Background image fills entire section */
+  position: relative;
+  min-height: 100vh; /* full viewport height */
   background: url("../assets/images/lab.jpg") no-repeat center center;
   background-size: cover;
-  min-height: 100vh;              /* full viewport height */
-  
-  /* Center text block */
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  /* Overlay for readability */
-  position: relative;
   color: var(--white);
   padding: 0 20px;
 }
 
-/* Optional dark overlay tint */
+/* Overlay tint for readability */
 .hero::before {
   content: "";
   position: absolute;
@@ -62,8 +59,8 @@ nav .menu {
 
 .hero-text {
   position: relative; /* ensures text sits above overlay */
-  max-width: 600px;
   z-index: 1;
+  max-width: 600px;
 }
 
 .hero-text h1 {
