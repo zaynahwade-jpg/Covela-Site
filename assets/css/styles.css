@@ -56,7 +56,10 @@ nav .menu {
   background: rgba(21, 69, 77, 0.6); /* semi-transparent teal overlay */
   z-index: 0;
 }
-
+.hero::before {
+  /* content: ""; */
+  /* background: rgba(21, 69, 77, 0.6); */
+}
 .hero-text {
   position: relative; /* ensures text sits above overlay */
   z-index: 1;
