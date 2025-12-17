@@ -89,6 +89,19 @@ transition: all 0.2s ease;
 /* ---------- Layout Helpers ---------- */
 .main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 .section { padding: 40px 0; }
+/* Upcoming Events Card */
+.events-card {
+  background: var(--teal);       /* teal background */
+  color: var(--white);           /* white text */
+  border-radius: 12px;           /* rounded corners */
+  padding: 20px;
+  max-width: 300px;              /* small rectangular size */
+  margin: 20px auto;             /* center it */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle shadow */
+  font-weight: 600;
+  font-size: 16px;
+}
 
 /* Role Signup Section */
 .section.reveal {
