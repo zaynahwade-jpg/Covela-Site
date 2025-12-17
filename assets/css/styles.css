@@ -90,6 +90,71 @@ transition: all 0.2s ease;
 .main { max-width: 1200px; margin: 0 auto; padding: 24px; }
 .section { padding: 40px 0; }
 
+/* Role Signup Section */
+.section.reveal {
+  background: var(--bg);        /* use your theme background */
+  color: var(--white);          /* ensure text is white */
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+/* Heading */
+.section.reveal h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+/* Subtext */
+.section.reveal p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Button Container */
+.section.reveal .button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Primary Buttons */
+.section.reveal .button.primary {
+  background: var(--white);
+  color: var(--teal);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.section.reveal .button.primary:hover {
+  background: var(--teal-light);
+  color: var(--white);
+}
+
+/* Admin Link */
+.section.reveal a {
+  color: #93C5FD; /* soft blue accent */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.section.reveal a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* ---------- Dashboard ---------- */
 .dashboard {
   max-width: 1200px;
