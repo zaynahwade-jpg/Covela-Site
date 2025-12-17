@@ -26,14 +26,91 @@ img{max-width:100%;height:auto;display:block}
 .navlinks a{padding:8px 10px;border-radius:8px;transition:color .2s ease, background-color .2s ease}
 .navlinks a:hover{color:var(--teal-light)}
 .navlinks a:focus{outline:2px solid var(--teal);outline-offset:2px}
-.cta{display:flex;gap:10px}
-.button{padding:10px 14px;border-radius:12px;font-weight:600;transition:transform .18s ease, background-color .2s ease, box-shadow .2s ease}
-.button.primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(58,134,255,.22)}
-.button.primary:hover{background:var(--teal-light);transform:translateY(-1px)}
-.button.ghost{border:1px solid var(--white)}
-.button.ghost:hover{background:#F3F4F6}
+
 nav .menu {
   display: none;
+}
+
+
+/* Hero Section */
+.hero {
+  /* Background image fills entire section */
+  background: url("../assets/images/lab.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;              /* full viewport height */
+  
+  /* Center text block */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Overlay for readability */
+  position: relative;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+/* Optional dark overlay tint */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 69, 77, 0.6); /* semi-transparent teal overlay */
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative; /* ensures text sits above overlay */
+  max-width: 600px;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.button.primary {
+  background: var(--teal);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.button.ghost {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button.primary:hover {
+  background: var(--black);
+}
+
+.button.ghost:hover {
+  background: var(--white);
+  color: var(--teal);
 }
 .main{max-width:1200px;margin:0 auto;padding:24px}
 .section{padding:40px 0}
@@ -42,51 +119,6 @@ nav .menu {
 .card{border:1px solid var(--border);border-radius:12px;background:#fff;padding:16px}
 .grid{display:grid;gap:16px}
 
-/* Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  background: var(--surface);
-  gap: 40px;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--blue);
-  margin-bottom: 10px;
-}
-
-.hero-text h2 {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 18px;
-  color: var(--text);
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-}
-
-.hero-image img {
-  max-width: 500px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
 
 /* Footer */
 .footer{border-top:1px solid var(--border)}
