@@ -5,7 +5,6 @@ o/* /assets/css/styles.css */
   --teal: #15454D;
   --black: #000000;
   --white: #FFFFFF;
-  --text: #FFFFFF;
 }
 
 
@@ -106,12 +105,13 @@ nav .menu {
 }
 
 .button.primary:hover {
-  background: var(--black);
+  background: var(--teal);
+  color: var(--white);
 }
 
 .button.ghost:hover {
-  background: var(--white);
-  color: var(--teal);
+  background: var(--grey);
+  color: var(--black);
 }
 .main{max-width:1200px;margin:0 auto;padding:24px}
 .section{padding:40px 0}
