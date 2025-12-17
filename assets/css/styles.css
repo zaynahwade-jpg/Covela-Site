@@ -1,4 +1,4 @@
-/* /assets/css/styles.css */
+o/* /assets/css/styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -36,7 +36,7 @@ nav .menu {
 .hero {
   position: relative;
   min-height: 100vh; /* full viewport height */
-  background: url("assets/img/lab.jpg") no-repeat center center;
+  background: url("assets/img/hero-lab.jpg") no-repeat center center;
   background-size: cover;
 
   display: flex;
