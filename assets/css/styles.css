@@ -44,7 +44,7 @@ position: relative;
 min-height: 100vh;
 
 /* Background image = bottom layer */
-background: url("../img/hero-lab.png") no-repeat center center;
+background: url("../img/hero-lab.jpg") no-repeat center center;
 background-size: cover;
 
 display: flex;
