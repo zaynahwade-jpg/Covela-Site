@@ -82,8 +82,8 @@ nav .menu {
 }
 
 .button.primary {
-  background: var(--teal);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
   padding: 12px 20px;
   border-radius: 8px;
   font-weight: 600;
@@ -93,11 +93,11 @@ nav .menu {
 
 .button.ghost {
   background: transparent;
-  border: 2px solid var(--white);
+  border: 1px solid var(--white);
   color: var(--white);
   padding: 12px 20px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 400
   cursor: pointer;
 }
 
