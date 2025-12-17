@@ -1,63 +1,26 @@
-<!-- /schedule.html -->
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Covela — Schedule</title>
-<link rel="stylesheet" href="assets/css/styles.css">
-<style>
-.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
-.day{border:1px solid var(--border);border-radius:12px;padding:10px;min-height:140px;background:#fff}
-.day h3{margin:0 0 8px;font-size:16px}
-.slot{background:#F3F4F6;border-radius:8px;padding:8px;margin-bottom:6px}
-@media (max-width:900px){.calendar{display:none}}
-.accordion{display:none}
-@media (max-width:900px){.accordion{display:block}}
-.details{border:1px solid var(--border);border-radius:12px;padding:10px;margin-bottom:8px;background:#fff}
-.details[open] summary{color:var(--blue)}
-.summary{cursor:pointer}
-</style>
-</head><body>
-  <!-- header same as index -->
-   <header class="header">
-  <nav class="nav" aria-label="Main">
-    <div class="logo">
-      <img src="/assets/img/logo-atom.png" alt="Covela atom logo">
-      Covela
-    </div>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="schedule.html">Calendar</a>
-      <a href="resources/index.html">Material</a>
-      <a href="tutors.html">Tutors</a>
-    </div>
-    <div class="cta">
-      <a class="button primary" href="signup.html">Sign Up</a>
-    </div>
-  </nav>
-</header>
-  <main class="main">
-    <h1>Calendar</h1>
-    <p style="color:var(--muted)">Live tutoring sessions and group study opportunities.</p>
+<main class="main">
+  <section class="schedule">
+    <h1 class="page-title">📅 Covela Schedule</h1>
+    <p class="subtitle">Stay organized with upcoming science events and workshops</p>
 
-    <div class="calendar reveal" aria-label="Week view">
-      <div class="day"><h3>Mon</h3><div class="slot">10:00 AM — Physics Workshop</div><div class="slot">2:00 PM — Chemistry Lab</div></div>
-      <div class="day"><h3>Tue</h3><div class="slot">4:00 PM — Biology Q&A</div></div>
-      <div class="day"><h3>Wed</h3><div class="slot">3:00 PM — Astronomy Study Group</div></div>
-      <div class="day"><h3>Thu</h3><div class="slot">1:00 PM — Anatomy Review</div></div>
-      <div class="day"><h3>Fri</h3><div class="slot">12:00 PM — Ecology Lab Prep</div></div>
-      <div class="day"><h3>Sat</h3><div class="slot">10:00 AM — Environmental Science Seminar</div></div>
-      <div class="day"><h3>Sun</h3><div class="slot">No events</div></div>
-    </div>
+    <!-- Calendar Grid -->
+    <div id="calendar" class="calendar-grid"></div>
 
-    <div class="accordion">
-      <details class="details reveal"><summary class="summary">Monday</summary><div class="slot">10:00 AM — Physics Workshop</div><div class="slot">2:00 PM — Chemistry Lab</div></details>
-      <details class="details reveal"><summary class="summary">Tuesday</summary><div class="slot">4:00 PM — Biology Q&A</div></details>
-      <details class="details reveal"><summary class="summary">Wednesday</summary><div class="slot">3:00 PM — Astronomy Study Group</div></details>
-      <details class="details reveal"><summary class="summary">Thursday</summary><div class="slot">1:00 PM — Anatomy Review</div></details>
-      <details class="details reveal"><summary class="summary">Friday</summary><div class="slot">12:00 PM — Ecology Lab Prep</div></details>
-      <details class="details reveal"><summary class="summary">Saturday</summary><div class="slot">10:00 AM — Environmental Science Seminar</div></details>
-      <details class="details reveal"><summary class="summary">Sunday</summary><div class="slot">No events</div></details>
-    </div>
-  </main>
-  <script defer src="/assets/js/app.js"></script>
-</body></html>
+    <!-- Event List -->
+    <h2 class="section-title">Available Events</h2>
+    <ul id="event-list" class="event-list">
+      <li>
+        <span>🔬 Lab Safety Workshop — Dec 20</span>
+        <button onclick="addEvent(20, 'Lab Safety Workshop')">Add</button>
+      </li>
+      <li>
+        <span>🌌 Astronomy Night — Dec 22</span>
+        <button onclick="addEvent(22, 'Astronomy Night')">Add</button>
+      </li>
+      <li>
+        <span>🧪 Chemistry Demo — Dec 23</span>
+        <button onclick="addEvent(23, 'Chemistry Demo')">Add</button>
+      </li>
+    </ul>
+  </section>
+</main>
