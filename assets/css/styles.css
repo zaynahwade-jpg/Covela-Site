@@ -132,6 +132,102 @@ transition: all 0.2s ease;
 @media (max-width: 600px) {
   .cards { gap: 15px; }
 }
+/* Schedule Page */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin: 0 auto 40px;
+  max-width: 900px;
+}
+
+.calendar-day {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 100px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.calendar-day span {
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* Event Styling */
+.event {
+  background: var(--teal);
+  color: var(--white);
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Event List */
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.event-list button {
+  background: var(--teal);
+  color: var(--white);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.event-list button:hover {
+  background: var(--teal-light);
+}
 
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--border); }
