@@ -36,7 +36,7 @@ nav .menu {
 .hero {
   position: relative;
   min-height: 100vh; /* full viewport height */
-  background: url("../assets/images/lab.jpg") no-repeat center center;
+  background: url("assets/images/lab.jpg") no-repeat center center;
   background-size: cover;
 
   display: flex;
@@ -97,7 +97,7 @@ nav .menu {
   color: var(--white);
   padding: 12px 20px;
   border-radius: 8px;
-  font-weight: 400
+  font-weight: 400;
   cursor: pointer;
 }
 
