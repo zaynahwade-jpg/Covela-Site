@@ -29,16 +29,13 @@ img{max-width:100%;height:auto;display:block}
 .navlinks a:hover{color:var(--teal-light)}
 .navlinks a:focus{outline:2px solid var(--teal);outline-offset:2px}
 .cta {
-  background: var(--white);
-  color: var(--black);
+  background: var(--teal);
+  color: var(--white);
   padding: 12px 20px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: pointer;
-}
-nav .menu {
-  display: none;
 }
 
 
