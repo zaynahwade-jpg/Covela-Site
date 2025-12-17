@@ -25,7 +25,9 @@ img{max-width:100%;height:auto;display:block}
 .button.primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
 .button.ghost{border:1px solid var(--border);background:#fff}
 .button.ghost:hover{background:#F3F4F6}
-
+nav .menu {
+  display: none;
+}
 .main{max-width:1200px;margin:0 auto;padding:24px}
 .section{padding:40px 0}
 
