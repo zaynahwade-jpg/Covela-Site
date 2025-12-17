@@ -28,7 +28,15 @@ img{max-width:100%;height:auto;display:block}
 .navlinks a{padding:8px 10px;border-radius:8px;transition:color .2s ease, background-color .2s ease}
 .navlinks a:hover{color:var(--teal-light)}
 .navlinks a:focus{outline:2px solid var(--teal);outline-offset:2px}
-
+.cta {
+  background: var(--white);
+  color: var(--black);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
 nav .menu {
   display: none;
 }
