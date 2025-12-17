@@ -1,29 +1,36 @@
 /* /assets/css/styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root{
-  --blue:#3A86FF; --blue-dark:#265DAB; --bg:#0F172A;
-  --text:#0B1220; --muted:#64748B; --surface:#F8FAFC; --border:#E5E7EB;
+:root {
+  --teal: #15454D;
+  --black: #000000;
+  --white: #FFFFFF;
+
+  /* Optional variations */
+  --teal-light: #1f5f66;   /* lighter teal for hover */
+  --teal-dark: #0d2f33;    /* deeper teal for accents */
+  --gray: #888888;         /* neutral text or borders */
 }
+
 *{box-sizing:border-box}
 html,body{margin:0}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;height:auto;display:block}
 
-.header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:50}
+.header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--white);z-index:50}
 .nav{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--bg)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--white)}
 .logo img{width:28px;height:28px}
 .navlinks{display:flex;gap:16px;margin-left:auto}
 .navlinks a{padding:8px 10px;border-radius:8px;transition:color .2s ease, background-color .2s ease}
-.navlinks a:hover{color:var(--blue)}
-.navlinks a:focus{outline:2px solid var(--blue);outline-offset:2px}
+.navlinks a:hover{color:var(--teal-light)}
+.navlinks a:focus{outline:2px solid var(--teal);outline-offset:2px}
 .cta{display:flex;gap:10px}
 .button{padding:10px 14px;border-radius:12px;font-weight:600;transition:transform .18s ease, background-color .2s ease, box-shadow .2s ease}
-.button.primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(58,134,255,.22)}
-.button.primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
-.button.ghost{border:1px solid var(--border);background:#fff}
+.button.primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(58,134,255,.22)}
+.button.primary:hover{background:var(--teal-light);transform:translateY(-1px)}
+.button.ghost{border:1px solid var(--white)}
 .button.ghost:hover{background:#F3F4F6}
 nav .menu {
   display: none;
