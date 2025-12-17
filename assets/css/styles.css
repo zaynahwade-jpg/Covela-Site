@@ -41,86 +41,102 @@ img{max-width:100%;height:auto;display:block}
 
 /* Hero Section */
 .hero {
-  position: relative;
-  min-height: 100vh; /* full viewport height */
-  background: url("../img/hero-lab.jpg") no-repeat center center;
-  background-size: cover;
+position: relative;
+min-height: 100vh;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Background image = bottom layer */
+background: url("../img/hero-lab.png") no-repeat center center;
+background-size: cover;
 
-  color: var(--white);
-  padding: 0 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+color: var(--white);
+padding: 0 20px;
+
+z-index: 0;
 }
 
-/* Overlay tint for readability */
+/* Overlay tint */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(21, 69, 77, 0.6); /* semi-transparent teal overlay */
-  z-index: 0;
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(21, 69, 77, 0.6);
+z-index: 1;
 }
 
+/* Text + buttons (top layer) */
 .hero-text {
-  position: relative; /* ensures text sits above overlay */
-  z-index: 1;
-  max-width: 600px;
+position: relative;
+z-index: 2;
+max-width: 600px;
 }
 
+/* Typography */
 .hero-text h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--white);
+font-size: 48px;
+font-weight: 700;
+margin-bottom: 16px;
+color: var(--white);
 }
 
 .hero-text p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: var(--white);
+font-size: 20px;
+margin-bottom: 30px;
+color: var(--white);
 }
 
+/* Buttons */
 .hero-buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
+display: flex;
+gap: 16px;
+justify-content: center;
 }
 
 .button.primary {
-  background: var(--white);
-  color: var(--black);
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+background: var(--white);
+color: var(--black);
+padding: 12px 20px;
+border-radius: 8px;
+font-weight: 600;
+border: none;
+cursor: pointer;
 }
 
 .button.ghost {
-  background: transparent;
-  border: 1px solid var(--white);
-  color: var(--white);
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 400;
-  cursor: pointer;
+background: transparent;
+border: 1px solid var(--white);
+color: var(--white);
+padding: 12px 20px;
+border-radius: 8px;
+font-weight: 400;
+cursor: pointer;
 }
 
+/* Hover states */
 .button.primary:hover {
-  background: var(--teal);
-  color: var(--white);
+background: var(--teal);
+color: var(--white);
 }
 
 .button.ghost:hover {
-  background: var(--grey);
-  color: var(--black);
+background: var(--grey);
+color: var(--black);
 }
-.main{max-width:1200px;margin:0 auto;padding:24px}
-.section{padding:40px 0}
 
+/* Layout helpers */
+.main {
+max-width: 1200px;
+margin: 0 auto;
+padding: 24px;
+}
+
+.section {
+padding: 40px 0;
+}
 /* Cards and grids */
 .card{border:1px solid var(--border);border-radius:12px;background:#fff;padding:16px}
 .grid{display:grid;gap:16px}
