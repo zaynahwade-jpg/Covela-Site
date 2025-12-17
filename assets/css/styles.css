@@ -90,126 +90,56 @@ transition: all 0.2s ease;
 .button.ghost { background: transparent; border: 1px solid var(--white); color: var(--white); }
 .button.ghost:hover { background: var(--gray); color: var(--black); }
 
-/* ---------- Layout Helpers ---------- */
-.main { max-width: 1200px; margin: 0 auto; padding: 24px; }
-.section { padding: 40px 0; }
-/* Upcoming Events Card */
-.events-card {
-  background: var(--teal);       /* teal background */
-  color: var(--white);           /* white text */
-  border-radius: 12px;           /* rounded corners */
-  padding: 20px;
-  max-width: 300px;              /* small rectangular size */
-  margin: 20px auto;             /* center it */
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle shadow */
-  font-weight: 600;
-  font-size: 16px;
-}
-
-/* Role Signup Section */
-.section.reveal {
-  background: var(--bg);        /* use your theme background */
-  color: var(--white);          /* ensure text is white */
-  border-radius: 16px;
-  padding: 32px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin: 40px auto;
-  max-width: 700px;
-}
-/* Base section styling */
-.section {
-  border-radius: 16px;
-  padding: 32px;
-  margin: 40px auto;
-  max-width: 900px;
-}
-
-/* Animation only */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .5s ease, transform .5s ease;
-}
-.reveal.in {
-  opacity: 1;
-  transform: none;
-}
-
-/* Section base */
+/* Homepage sections below hero */
 .section {
   padding: 40px 20px;
-  margin: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Theme variants */
-.section.light {
-  background: var(--bg-light, #fff);
-  color: var(--text-dark, #000);
+/* Upcoming events */
+.events-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--text);
+  margin-top: 20px;
+}
+
+/* Mission statement */
+.section.light p {
+  color: var(--text);
+  line-height: 1.6;
+}
+/* Attribute cards */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* one column → vertical stack */
+  gap: 20px;
+  max-width: 600px; /* optional: limits width for better reading */
+  margin: 0 auto; /* center the grid horizontally */
+}
+
+.grid .card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
   text-align: left;
 }
 
-.section.dark {
-  background: var(--bg-dark, #15454D);
-  color: var(--text-light, #fff);
-  text align: center;
-}
-
-/* Heading */
-.section.reveal h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-/* Subtext */
-.section.reveal p {
-  font-size: 16px;
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-/* Button Group Container */
+/* Role signup button group */
 .button-group {
   display: flex;
-  gap: 16px;              /* space between buttons */
-  justify-content: center;
-  flex-wrap: wrap;        /* ensures they stack on small screens */
-  margin: 20px 0;
+  gap: 16px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+.button-group .button {
+  flex: 1 1 200px;
 }
 
-/* Primary Buttons */
-.button.primary {
-  background: var(--white);
-  color: var(--teal);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-/* Hover State */
-.button.primary:hover {
-  background: var(--teal);
-  color: var(--white);
-  transform: translateY(-2px); /* subtle lift */
-}
-
-
-/* Admin Link */
-.section.reveal a {
-  color: #93C5FD; /* soft blue accent */
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.section.reveal a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
 
 /* ---------- Dashboard ---------- */
 .dashboard {
