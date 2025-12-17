@@ -106,7 +106,9 @@ transition: all 0.2s ease;
   color: var(--text);
   margin-top: 20px;
 }
-
+.button.cal { background: transparent; border: 1px solid var(--white); color: var(--grey); }
+.button.cal:hover { background: var(--gray); color: var(--black); }
+ 
 /* Mission statement */
 .section.light p {
   color: var(--text);
