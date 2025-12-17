@@ -101,6 +101,35 @@ transition: all 0.2s ease;
   margin: 40px auto;
   max-width: 700px;
 }
+/* Base section styling */
+.section {
+  border-radius: 16px;
+  padding: 32px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+/* Animation behavior */
+.section.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.section.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Theme variants */
+.section.light {
+  background: var(--bg-light, #fff);
+  color: var(--text-dark, #000);
+}
+
+.section.dark {
+  background: var(--bg-dark, #15454D);
+  color: var(--text-light, #fff);
+}
 
 /* Heading */
 .section.reveal h2 {
@@ -116,32 +145,35 @@ transition: all 0.2s ease;
   margin-bottom: 16px;
   line-height: 1.5;
 }
-
-/* Button Container */
-.section.reveal .button-group {
+/* Button Group Container */
+.button-group {
   display: flex;
-  gap: 12px;
+  gap: 16px;              /* space between buttons */
   justify-content: center;
+  flex-wrap: wrap;        /* ensures they stack on small screens */
   margin: 20px 0;
 }
 
 /* Primary Buttons */
-.section.reveal .button.primary {
+.button.primary {
   background: var(--white);
   color: var(--teal);
-  padding: 12px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.section.reveal .button.primary:hover {
-  background: var(--teal-light);
+/* Hover State */
+.button.primary:hover {
+  background: var(--teal);
   color: var(--white);
+  transform: translateY(-2px); /* subtle lift */
 }
+
 
 /* Admin Link */
 .section.reveal a {
