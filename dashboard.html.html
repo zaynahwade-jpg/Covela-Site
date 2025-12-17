@@ -61,40 +61,35 @@
     }
   });
 </script>
-  <main class="main">
-    <h1>Welcome back, Zaynah</h1>
+ <main class="dashboard">
+  <section class="welcome">
+    <h1>Welcome back, Zaynah 👋</h1>
+    <p>Ready to keep learning?</p>
+  </section>
 
-    <section class="grid kpi reveal">
-      <div class="card lift"><div class="kpi-value">12</div><div class="kpi-label">Resources accessed</div></div>
-      <div class="card lift"><div class="kpi-value">7.5h</div><div class="kpi-label">Study hours this week</div></div>
-      <div class="card lift"><div class="kpi-value">3</div><div class="kpi-label">Sessions attended</div></div>
-      <div class="card lift"><div class="kpi-value">82%</div><div class="kpi-label">Quiz mastery</div></div>
-    </section>
+  <section class="cards">
+    <div class="card practice">
+      <h2>Continue Practicing</h2>
+      <button class="button primary">Continue Lesson</button>
+    </div>
+    <div class="card streak">
+      <h2>12-day streak</h2>
+      <p>Keep it up!</p>
+    </div>
+    <div class="card hours">
+      <h2>Study Hours</h2>
+      <p>42.5</p>
+      <!-- Optional chart -->
+    </div>
+  </section>
 
-    <section class="grid reveal" style="grid-template-columns:2fr 1.2fr;margin-top:16px">
-      <div class="card lift">
-        <h2>Continue practicing</h2>
-        <ul>
-          <li>Orbital mechanics — 65% mastered</li>
-          <li>Stoichiometry — 40% mastered</li>
-          <li>Anatomy: Nervous system — 25% mastered</li>
-        </ul>
-        <a class="button primary" href="/resources/index.html">Resume</a>
-      </div>
-      <div class="card lift">
-        <h2>Study hours</h2>
-        <p style="color:var(--muted)">Weekly progress chart (placeholder)</p>
-      </div>
-    </section>
-
-    <section class="card lift reveal" style="margin-top:16px">
-      <h2>Past sessions</h2>
-      <ul>
-        <li>Dec 5 — Chemistry Lab — 45 min</li>
-        <li>Dec 3 — Astronomy Group — 60 min</li>
-        <li>Nov 29 — Ecology Prep — 30 min</li>
-      </ul>
-    </section>
-  </main>
+  <section class="sessions">
+    <h2>Upcoming Sessions</h2>
+    <table>
+      <tr><th>Date</th><th>Tutor</th><th>Subject</th><th>Duration</th><th>Notes</th></tr>
+      <tr><td>Nov 21</td><td>Sarah T.</td><td>Chemistry</td><td>45 min</td><td><button>View</button></td></tr>
+    </table>
+  </section>
+</main>
   <script defer src="/assets/js/app.js"></script>
 </body></html>
