@@ -6,6 +6,7 @@ o/* /assets/css/styles.css */
   --black: #000000;
   --white: #FFFFFF;
 
+
   /* Optional variations */
   --teal-light: #1f5f66;   /* lighter teal for hover */
   --teal-dark: #0d2f33;    /* deeper teal for accents */
@@ -67,6 +68,7 @@ nav .menu {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 16px;
+  color: var(--white);
 }
 
 .hero-text p {
