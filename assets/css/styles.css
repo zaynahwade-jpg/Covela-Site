@@ -316,7 +316,72 @@ transition: all 0.2s ease;
 .event-list button:hover {
   background: var(--teal-light);
 }
+/* ---------- Resources Page ---------- */
+.resources {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
 
+.resources h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Grid of subjects */
+.grid.subjects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .grid.subjects { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid.subjects { grid-template-columns: 1fr; }
+}
+
+/* Resource cards */
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card h2 a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.card h2 a:hover {
+  color: var(--teal-light);
+  text-decoration: underline;
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
+}
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; }
