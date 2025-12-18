@@ -115,6 +115,9 @@ transition: all 0.2s ease;
   line-height: 1.6;
 }
 /* Attribute cards */
+.attributes. title {
+  text-align: center;
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr; /* one column → vertical stack */
