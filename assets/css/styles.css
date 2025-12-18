@@ -386,6 +386,76 @@ transition: all 0.2s ease;
   color: var(--text);
   line-height: 1.5;
 }
+/* ---------- Tutors Page ---------- */
+.tutors h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.tutors .subtitle {
+  font-size: 18px;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tutor card */
+.tutor-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tutor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.tutor-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+
+.tutor-card p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.tutor-card a {
+  color: var(--teal-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutor-card a:hover {
+  text-decoration: underline;
+  color: var(--teal-dark);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .tutors h1 { font-size: 26px; }
+  .tutors .subtitle { font-size: 16px; }
+}
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; }
