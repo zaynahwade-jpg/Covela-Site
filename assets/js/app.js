@@ -42,4 +42,4 @@ function addEvent(day, eventName) {
   event.textContent = "✅ " + eventName;
   dayCell.appendChild(event);
 }
-});
+
