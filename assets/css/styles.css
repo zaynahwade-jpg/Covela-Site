@@ -121,14 +121,11 @@ transition: all 0.2s ease;
   line-height: 1.6;
 }
 /* Attribute cards */
-.attributes.title {
-  text-align: center;
-}
 #attributes-title {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
-  color: var(--teal);
+  color: var(--black);
   margin-bottom: 20px;
 }
 .grid {
