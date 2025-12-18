@@ -180,7 +180,10 @@ transition: all 0.2s ease;
 .button-group .button {
   flex: 1 1 200px;
 }
-
+.blue-link {
+  color: var(--blue);   /* or #1e90ff */
+  text-decoration: underline; /* optional */
+}
 
 /* ---------- Dashboard ---------- */
 .dashboard {
