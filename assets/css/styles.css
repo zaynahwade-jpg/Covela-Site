@@ -35,7 +35,7 @@ img { max-width: 100%; height: auto; display: block; }
 .cta {
 background: var(--teal);
 color: var(--white);
-padding: 5px 8px;
+padding: 0px 0px;
 border-radius: 2px;
 font-weight: 400;
 border: none;
