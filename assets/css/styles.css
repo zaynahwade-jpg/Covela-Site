@@ -112,7 +112,7 @@ transition: all 0.2s ease;
   color: var(--text);
   margin-top: 20px;
 }
-.button.cal { background: transparent; border: 1px solid var(--white); color: var(--grey); }
+.button.cal { background: transparent; border: 1px solid var(--white); color: var(--gray); }
 .button.cal:hover { background: var(--gray); color: var(--black); }
  
 /* Mission statement */
@@ -121,7 +121,7 @@ transition: all 0.2s ease;
   line-height: 1.6;
 }
 /* Attribute cards */
-.attributes. title {
+.attributes.title {
   text-align: center;
 }
 .grid {
