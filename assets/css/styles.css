@@ -124,6 +124,13 @@ transition: all 0.2s ease;
 .attributes.title {
   text-align: center;
 }
+#attributes-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr; /* one column → vertical stack */
