@@ -1,0 +1,58 @@
+<!-- /tutors.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Covela — Tutors</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/tutors.css"> <!-- new CSS file -->
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo-atom.png" alt="Covela logo"> Covela
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="schedule.html">Calendar</a>
+        <a href="resources/index.html">Material</a>
+        <a href="tutors.html">Tutors</a>
+      </div>
+      <div class="cta">
+        <a class="button nav" href="signup.html">Sign up</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main content -->
+  <main class="main tutors">
+    <h1>Our Tutors</h1>
+    <p class="subtitle">Meet the people ready to help you learn.</p>
+
+    <div class="tutors-grid">
+      <!-- Tutor Card -->
+      <div class="tutor-card lift reveal">
+        <h2>Zaynah</h2>
+        <p><strong>Subjects:</strong> Biology, Anatomy, Chemistry</p>
+        <p><strong>Email:</strong> <a href="mailto:zaynah@example.com">zaynah@example.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>© 2025 Covela</div>
+      <div><a href="resources/index.html">Resources</a></div>
+      <div><a href="tutors.html">Tutors</a></div>
+      <div><a href="signup.html">Sign Up</a></div>
+    </div>
+  </footer>
+
+  <script defer src="assets/js/app.js"></script>
+</body>
+</html>
