@@ -35,11 +35,17 @@ img { max-width: 100%; height: auto; display: block; }
 .cta {
 background: var(--teal);
 color: var(--white);
-padding: 12px 20px;
-border-radius: 8px;
+padding: 5px 8px;
+border-radius: 2px;
 font-weight: 400;
 border: none;
 cursor: pointer;
+transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.cta :hover {
+  background-color: var(--teal-light); /* slightly lighter teal on hover */
+  color: var(--white);
+  transform: translateY(-2px);
 }
 
 /* ---------- Hero Section ---------- */
