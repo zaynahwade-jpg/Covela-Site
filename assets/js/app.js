@@ -42,4 +42,10 @@ function addEvent(day, eventName) {
   event.textContent = "✅ " + eventName;
   dayCell.appendChild(event);
 }
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("navLinks");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
