@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covela — Tutor Application</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<main class="auth-container">
+  <form id="tutorForm" class="auth-card">
+    <h2>Tutor Application</h2>
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="date" id="dob" required>
+    <input type="text" id="address" placeholder="Address" required>
+
+    <label class="checkbox-row">
+      <input type="checkbox" id="districtTutor">
+      I am a tutor for a school district
+    </label>
+
+    <input type="text" id="school" placeholder="School Name" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <button type="submit" class="button primary">Submit Application</button>
+
+    <p class="auth-switch">
+      Already have an account?
+      <a href="signin.html">Sign In</a>
+    </p>
+  </form>
+</main>
+
+<script>
+document.getElementById("tutorForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const user = {
+    username: document.getElementById("name").value.trim(),
+    role: "tutor"
+  };
+
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "dashboard.html";
+});
+</script>
+
+</body>
+</html>
