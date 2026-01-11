@@ -43,5 +43,8 @@ function addEvent(day, eventName) {
   dayCell.appendChild(event);
 }
 
+if (!user) {
+  cta.innerHTML = `<a class="button nav" href="login.html.html">Sign In</a>`;
+}
 
 
