@@ -158,5 +158,19 @@ Covela </a>
       <li>AP Physics Practice (Fiveable, Quizlet)</li>
     </ul>
   </section>
+     <div id="addMaterial"></div>
 </main>
+    <script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user && user.role === "tutor") {
+  document.getElementById("addMaterial").innerHTML = `
+    <button class="button primary" onclick="addMaterial()">Add Material</button>
+  `;
+}
+
+function addMaterial() {
+  alert("In a real system, this would upload or link new material.");
+}
+</script>
 </body></html>
