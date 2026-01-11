@@ -701,3 +701,16 @@ transition: all 0.2s ease;
   display: flex;
   gap: 12px;
 }
+#roleCTA .button.nav {
+  background: var(--teal);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+#roleCTA .button.nav:hover {
+  background: var(--blue-dark);
+}
