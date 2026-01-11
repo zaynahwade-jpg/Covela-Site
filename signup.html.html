@@ -1,78 +1,64 @@
-<!doctype html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Covela — Science Starts Here</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covela — Create Account</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/app.js"></script>
 </head>
+
 <body>
-  <header class="header">
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" class="logo">
-  <img src="assets/img/logo-atom.png" alt="Covela logo">
-Covela </a>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-<ul class="nav-links" id="navLinks">
-  <!-- your links here -->
-</ul>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="dashboard.html.html">Dashboard</a>
-        <a href="schedule.html.html">Calendar</a>
-        <a href="resources/index.html">Material</a>
-        <a href="tutors.html">Tutors</a>
-      </div>
-      <div class="cta">
-        <a class="button nav" href="signup.html.html">Sign Up</a>
-      </div>
-    </nav>
-  </header>
-  <main class="main">
-    <h1>Sign Up</h1>
-    <form id="signup-form">
-      <label>Email</label>
-      <input type="email" id="email" required>
 
-      <label>Password</label>
-      <input type="password" id="password" required>
+<main class="auth-container">
+  <div class="auth-card">
+    <h2>Create Account</h2>
 
-      <button type="submit" class="button primary">Create Account</button>
-    </form>
-  </main>
+    <p>Select your role:</p>
 
-  <script src="/assets/js/app.js"></script>
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script>
-    // Your Firebase config (replace with your project’s keys)
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
+    <div class="role-buttons">
+      <button onclick="chooseRole('student')" class="button primary">Student</button>
+      <button onclick="chooseRole('tutor')" class="button secondary">Tutor</button>
+    </div>
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+    <div id="formContainer"></div>
 
-    // Handle sign up
-    document.getElementById('signup-form').addEventListener('submit', (e) => {
+    <p class="auth-switch">
+      Already have an account?
+      <a href="signin.html">Sign In</a>
+    </p>
+  </div>
+</main>
+
+<script>
+function chooseRole(role) {
+  if (role === "student") {
+    document.getElementById("formContainer").innerHTML = `
+      <form id="studentForm">
+        <input type="text" id="sname" placeholder="Full Name" required>
+        <input type="date" id="sdob" required>
+        <input type="email" id="semail" placeholder="Email" required>
+        <input type="password" id="spassword" placeholder="Password" required>
+        <button type="submit" class="button primary">Create Account</button>
+      </form>
+    `;
+
+    document.getElementById("studentForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
 
-      auth.createUserWithEmailAndPassword(email, password)
-        .then(userCredential => {
-          alert("Account created for " + userCredential.user.email);
-        })
-        .catch(error => {
-          alert(error.message);
-        });
+      const user = {
+        username: document.getElementById("sname").value.trim(),
+        role: "student"
+      };
+
+      localStorage.setItem("user", JSON.stringify(user));
+      window.location.href = "dashboard.html";
     });
-  </script>
+
+  } else {
+    window.location.href = "tutor-application.html";
+  }
+}
+</script>
+
 </body>
 </html>
