@@ -86,7 +86,7 @@ if (!user) window.location.href = "signin.html";
         </tbody>
       </table>
     </section>
-
+<button id="signOutBtn" class="button secondary">Sign Out</button>
   </main>
 
   <!-- Optional Firebase SDKs -->
@@ -122,6 +122,12 @@ if (!user) {
 } else {
   cta.innerHTML = ``;
 }
+</script>
+  <script>
+document.getElementById("signOutBtn").addEventListener("click", function () {
+  localStorage.removeItem("user");
+  window.location.href = "login.html.html";
+});
 </script>
 </body>
 </html>
