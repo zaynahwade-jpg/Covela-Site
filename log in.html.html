@@ -1,79 +1,58 @@
-<!doctype html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Covela — Science Starts Here</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covela — Sign In</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/app.js"></script>
 </head>
+
 <body>
-  <header class="header">
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" class="logo">
-  <img src="assets/img/logo-atom.png" alt="Covela logo">
-Covela </a>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-<ul class="nav-links" id="navLinks">
-  <!-- your links here -->
-</ul>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="dashboard.html.html">Dashboard</a>
-        <a href="schedule.html.html">Calendar</a>
-        <a href="resources/index.html">Material</a>
-        <a href="tutors.html">Tutors</a>
-      </div>
-      <div class="cta">
-        <a class="button nav" href="signup.html">Sign Up</a>
-      </div>
-    </nav>
-  </header>
-  <main class="main">
-    <h1>Login</h1>
-    <form id="login-form">
-      <label>Email</label>
-      <input type="email" id="login-email" required>
 
-      <label>Password</label>
-      <input type="password" id="login-password" required>
+<script>
+// Redirect if already signed in
+const existingUser = localStorage.getItem("user");
+if (existingUser) window.location.href = "dashboard.html";
+</script>
 
-      <button type="submit" class="button primary">Log In</button>
-    </form>
-  </main>
+<main class="auth-container">
+  <form id="signinForm" class="auth-card">
+    <h2>Sign In</h2>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script>
-    // Replace with your Firebase project config
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+    <label class="checkbox-row">
+      <input type="checkbox" id="keepSignedIn">
+      Keep me signed in
+    </label>
 
-    // Handle login
-    document.getElementById('login-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('login-email').value;
-      const password = document.getElementById('login-password').value;
+    <button type="submit" class="button primary">Sign In</button>
 
-      auth.signInWithEmailAndPassword(email, password)
-        .then(userCredential => {
-          alert("Welcome back, " + userCredential.user.email);
-          // Redirect to dashboard
-          window.location.href = "dashboard.html";
-        })
-        .catch(error => {
-          alert(error.message);
-        });
-    });
-  </script>
+    <p class="auth-switch">
+      Don’t have an account?
+      <a href="signup.html">Create one</a>
+    </p>
+  </form>
+</main>
+
+<script>
+document.getElementById("signinForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+
+  // Presentation mock logic:
+  // If username contains "tutor", sign in as tutor
+  let role = username.toLowerCase().includes("tutor") ? "tutor" : "student";
+
+  const user = { username, role };
+
+  localStorage.setItem("user", JSON.stringify(user));
+
+  window.location.href = "dashboard.html";
+});
+</script>
+
 </body>
 </html>
