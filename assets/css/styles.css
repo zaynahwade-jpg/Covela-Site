@@ -659,3 +659,45 @@ transition: all 0.2s ease;
 .button.secondary:hover {
   background: #e4f4f7;
 }
+/* ------------------------------------------------ */
+/* HERO BUTTONS — restore original Covela styling   */
+/* ------------------------------------------------ */
+
+.hero .button {
+  display: inline-block;
+  width: auto;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+/* Primary hero button (Connect Today) */
+.hero .button.primary {
+  background: var(--white);
+  color: var(--black);
+}
+
+.hero .button.primary:hover {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* Ghost hero button (Learn More) */
+.hero .button.ghost {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.hero .button.ghost:hover {
+  background: var(--gray);
+  color: var(--black);
+}
+
+/* Keep hero buttons side-by-side */
+.hero .hero-buttons {
+  display: flex;
+  gap: 12px;
+}
