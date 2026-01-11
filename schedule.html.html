@@ -53,3 +53,17 @@ Covela </a>
     </ul>
   </section>
 </main>
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+const cta = document.getElementById("roleCTA");
+
+if (!user) {
+  cta.innerHTML = `<a class="button nav" href="signin.html">Sign In</a>`;
+} else if (user.role === "tutor") {
+  cta.innerHTML = `<a class="button nav" href="create-session.html">Create Session</a>`;
+} else {
+  cta.innerHTML = ``;
+}
+</script>
+</body>
+</html>
