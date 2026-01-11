@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covela — Create Session</title>
+
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- Redirect if not signed in or not a tutor -->
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+if (!user) window.location.href = "signin.html";
+if (user.role !== "tutor") window.location.href = "dashboard.html";
+</script>
+
+<!-- HEADER (same as your other pages) -->
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">Covela</a>
+
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="schedule.html">Calendar</a>
+      <a href="resources/index.html">Material</a>
+      <a href="tutors.html">Tutors</a>
+    </div>
+
+    <!-- Role-based CTA placeholder -->
+    <div id="roleCTA"></div>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="auth-container">
+  <form id="sessionForm" class="auth-card">
+    <h2>Create a Session</h2>
+
+    <input type="text" id="title" placeholder="Session Title" required>
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <input type="text" id="link" placeholder="Meeting Link (optional)">
+    <textarea id="description" placeholder="Description" rows="4"></textarea>
+
+    <button type="submit" class="button primary">Create Session</button>
+  </form>
+</main>
+
+<!-- SAVE SESSION LOGIC -->
+<script>
+document.getElementById("sessionForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const title = document.getElementById("title").value.trim();
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const link = document.getElementById("link").value.trim();
+  const description = document.getElementById("description").value.trim();
+
+  const newSession = { title, date, time, link, description };
+
+  let sessions = JSON.parse(localStorage.getItem("sessions")) || [];
+  sessions.push(newSession);
+  localStorage.setItem("sessions", JSON.stringify(sessions));
+
+  alert("Session created successfully!");
+
+  window.location.href = "dashboard.html";
+});
+</script>
+
+<!-- ROLE-BASED CTA SCRIPT -->
+<script>
+const cta = document.getElementById("roleCTA");
+
+if (!user) {
+  cta.innerHTML = `<a class="button nav" href="signin.html">Sign In</a>`;
+} else if (user.role === "tutor") {
+  cta.innerHTML = `<a class="button nav" href="create-session.html">Create Session</a>`;
+} else {
+  cta.innerHTML = ``;
+}
+</script>
+
+</body>
+</html>
