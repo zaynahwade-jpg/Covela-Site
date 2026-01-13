@@ -45,4 +45,3 @@ function addEvent(day, eventName) {
 
 
 
-
