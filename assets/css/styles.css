@@ -32,6 +32,46 @@ img { max-width: 100%; height: auto; display: block; }
 .navlinks a { padding: 8px 10px; border-radius: 8px; transition: color .2s ease, background-color .2s ease; }
 .navlinks a:hover { color: var(--teal-light); }
 .navlinks a:focus { outline: 2px solid var(--teal); outline-offset: 2px; }
+/* Hide hamburger on desktop */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Desktop nav layout */
+.navlinks {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide nav links until opened */
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  /* When menu is open */
+  .navlinks.open {
+    display: flex;
+  }
+}
 
 .cta {
 background: var(--teal);
