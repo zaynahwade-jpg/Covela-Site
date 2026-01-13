@@ -672,7 +672,7 @@ transition: all 0.2s ease;
 }
 
 /* Buttons */
-.button.submit {
+.submit.button {
   background: var(--teal);
   color: white;
   padding: 12px 18px;
@@ -684,7 +684,7 @@ transition: all 0.2s ease;
   margin-top: 10px;
 }
 
-.button.submit:hover {
+.submit.button:hover {
   background: var(--blue-dark);
 }
 
