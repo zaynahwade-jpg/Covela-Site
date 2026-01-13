@@ -40,10 +40,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Desktop nav layout */
-.navlinks {
+.nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
+  align-items: center;
 }
 
 /* MOBILE ONLY */
@@ -55,7 +56,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* Hide nav links until opened */
-  .navlinks {
+  .nav-links {
     display: none;
     flex-direction: column;
     background: white;
@@ -68,7 +69,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   /* When menu is open */
-  .navlinks.open {
+  .nav-links.open {
     display: flex;
   }
 }
