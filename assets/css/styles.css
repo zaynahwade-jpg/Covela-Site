@@ -28,10 +28,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav { max-width: 1200px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; gap: 18px; }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--teal); }
 .logo img { width: 28px; height: 28px; }
-.navlinks { display: flex; gap: 16px; margin-left: auto; }
-.navlinks a { padding: 8px 10px; border-radius: 8px; transition: color .2s ease, background-color .2s ease; }
-.navlinks a:hover { color: var(--teal-light); }
-.navlinks a:focus { outline: 2px solid var(--teal); outline-offset: 2px; }
+.nav-links { display: flex; gap: 16px; margin-left: auto; }
+.nav-links a { padding: 8px 10px; border-radius: 8px; transition: color .2s ease, background-color .2s ease; }
+.nav-links a:hover { color: var(--teal-light); }
+.nav-links a:focus { outline: 2px solid var(--teal); outline-offset: 2px; }
 /* Hide hamburger on desktop */
 .menu-icon {
   display: none;
