@@ -13,6 +13,7 @@
   <form id="tutorForm" class="auth-card">
     <h2>Tutor Application</h2>
 
+    <!-- Existing fields -->
     <input type="text" id="name" placeholder="Full Name" required>
     <input type="date" id="dob" required>
     <input type="text" id="address" placeholder="Address" required>
@@ -23,6 +24,51 @@
     </label>
 
     <input type="text" id="school" placeholder="School Name" required>
+
+    <!-- NEW: Grade Level -->
+    <select id="grade" required>
+      <option value="" disabled selected>Select Grade Level</option>
+      <option value="9">9th Grade</option>
+      <option value="10">10th Grade</option>
+      <option value="11">11th Grade</option>
+      <option value="12">12th Grade</option>
+    </select>
+
+    <!-- NEW: Subjects -->
+    <select id="subjects" required>
+      <option value="" disabled selected>Subjects You Can Tutor</option>
+      <option value="biology">Biology</option>
+      <option value="chemistry">Chemistry</option>
+      <option value="physics">Physics</option>
+      <option value="anatomy">Anatomy & Physiology</option>
+      <option value="environmental">Environmental Science</option>
+      <option value="astronomy">Astronomy</option>
+    </select>
+
+    <!-- NEW: Experience -->
+    <textarea 
+      id="experience" 
+      rows="4" 
+      placeholder="Tutoring or teaching experience (optional)"
+    ></textarea>
+
+    <!-- NEW: Why they want to tutor -->
+    <textarea 
+      id="tutorReason" 
+      rows="5" 
+      placeholder="Why do you want to be a tutor? Explain your motivation, goals, or experience."
+      required
+    ></textarea>
+
+    <!-- NEW: Availability -->
+    <textarea 
+      id="availability" 
+      rows="3" 
+      placeholder="Availability (days/times you can tutor)"
+      required
+    ></textarea>
+
+    <!-- Existing password field -->
     <input type="password" id="password" placeholder="Password" required>
 
     <button type="submit" class="button primary">Submit Application</button>
