@@ -25,10 +25,153 @@ Covela </a>
      <div id="roleCTA"></div>
     </nav>
   </header>
-  <main class="main">
-  <h1>District Provisions</h1>
-  <p>Admins can integrate Covela into school tutoring programs, manage student accounts, and track progress...</p>
-</main>
+  <main>
+ <style>
+  /* Import Inter font */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --teal: #15454D;
+    --light-teal: #1f5f68;
+    --text-dark: #222;
+    --text-light: #555;
+    --max-width: 800px;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    color: var(--text-dark);
+  }
+
+  .district {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+
+  .district-container {
+    max-width: var(--max-width);
+    width: 100%;
+    text-align: center;
+  }
+
+  .district-header h1 {
+    font-size: 2.5rem;
+    color: var(--teal);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .district-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+
+  .district-section {
+    margin-bottom: 50px;
+  }
+
+  .district-section h2 {
+    color: var(--teal);
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .district-section p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .district-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 25px auto;
+    max-width: 600px;
+  }
+
+  .district-section ul li {
+    background: white;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-left: 4px solid var(--teal);
+    border-radius: 4px;
+    text-align: left;
+    color: var(--text-dark);
+  }
+</style>
+
+<section class="district" id="district">
+  <div class="district-container">
+
+    <header class="district-header">
+      <h1>About Covela District Provisons</h1>
+      <p>A vision for student-powered science learning.</p>
+    </header>
+
+    <section class="district-section">
+      <h2>A District That Believes in Student‑Powered Learning</h2>
+      <p>
+        Our district is built on a simple belief: when students are empowered to lead, create, and collaborate,
+        learning becomes deeper, more meaningful, and more accessible. Covela aligns with this vision by offering
+        a modern, student-driven approach to science education — one that complements the district’s commitment
+        to innovation, equity, and academic excellence.
+      </p>
+    </section>
+
+    <section class="district-section">
+      <h2>How Covela Fits Naturally Into Schools</h2>
+      <p>
+        Covela isn’t a program, curriculum, or mandated tool. It’s a flexible, student-created science hub designed
+        to support learning in ways that feel intuitive and adaptable.
+      </p>
+      <ul>
+        <li>Encourages peer‑to‑peer learning</li>
+        <li>Supports teachers with student-friendly explanations</li>
+        <li>Strengthens STEM engagement across grade levels</li>
+        <li>Promotes digital literacy and responsible content creation</li>
+        <li>Reflects district values of curiosity, collaboration, and inclusivity</li>
+      </ul>
+    </section>
+
+    <section class="district-section">
+      <h2>A Vision for Seamless Integration</h2>
+      <p>
+        While every school is unique, Covela is designed to fit into a variety of learning environments.
+        It can complement classroom instruction, independent study, STEM clubs, enrichment programs,
+        research projects, and peer‑mentorship initiatives — all without requiring formal implementation steps.
+      </p>
+    </section>
+
+    <section class="district-section">
+      <h2>Supporting Teachers and Students</h2>
+      <p>
+        Teachers can use Covela as a reference for clear explanations and visual breakdowns. Students can use it
+        to explore topics, reinforce understanding, or contribute their own knowledge as creators.
+      </p>
+      <p>
+        The platform encourages collaboration, critical thinking, scientific communication, and leadership —
+        skills that align with district-wide goals for college and career readiness.
+      </p>
+    </section>
+
+    <section class="district-section">
+      <h2>A District Committed to the Future of STEM</h2>
+      <p>
+        By embracing platforms like Covela, our district continues to champion forward-thinking approaches to
+        education. Covela reflects that mission: a space where students lead, teachers support, and science
+        becomes accessible to everyone.
+      </p>
+    </section>
+
+  </div>
+</section>
+  </main>
   <script>
 const user = JSON.parse(localStorage.getItem("user"));
 const cta = document.getElementById("roleCTA");
