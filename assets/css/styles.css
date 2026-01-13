@@ -672,8 +672,8 @@ transition: all 0.2s ease;
 }
 
 /* Buttons */
-.button.primary {
-  background: var(--blue);
+.button.submit {
+  background: var(--teal);
   color: white;
   padding: 12px 18px;
   border-radius: 8px;
@@ -684,7 +684,7 @@ transition: all 0.2s ease;
   margin-top: 10px;
 }
 
-.button.primary:hover {
+.button.submit:hover {
   background: var(--blue-dark);
 }
 
@@ -731,19 +731,7 @@ transition: all 0.2s ease;
   gap: 12px;
   margin: 20px 0;
 }
-.button.secondary {
-  background: #f0f8fa;
-  color: var(--blue);
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: 1px solid var(--blue);
-  cursor: pointer;
-  font-weight: 600;
-}
 
-.button.secondary:hover {
-  background: #e4f4f7;
-}
 /* ------------------------------------------------ */
 /* HERO BUTTONS — restore original Covela styling   */
 /* ------------------------------------------------ */
