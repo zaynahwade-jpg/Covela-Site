@@ -28,7 +28,7 @@ if (!user) window.location.href = "signin.html";
 </ul>
       <div class="navlinks">
         <a href="index.html">Home</a>
-        <span id="dashboardLink" class="active"></span>
+        <a href="dashboard.html.html" class="active">Dashboard</a>
         <a href="schedule.html.html">Calendar</a>
         <a href="resources/index.html">Material</a>
         <a href="tutors.html">Tutors</a>
@@ -129,22 +129,6 @@ document.getElementById("signOutBtn").addEventListener("click", function () {
   localStorage.removeItem("user");
   window.location.href = "signin.html";
 });
-</script>
-  <script>
-const user = JSON.parse(localStorage.getItem("user"));
-const dash = document.getElementById("dashboardLink");
-
-if (!user) {
-  dash.innerHTML = `<a href="signin.html">Dashboard</a>`;
-}
-
-else if (user.role === "tutor") {
-  dash.innerHTML = `<a href="tutor-dashboard.html">Dashboard</a>`;
-}
-
-else {
-  dash.innerHTML = `<a href="dashboard.html.html">Dashboard</a>`;
-}
 </script>
 </body>
 </html>
