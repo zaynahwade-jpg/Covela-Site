@@ -93,6 +93,48 @@ document.getElementById("tutorForm").addEventListener("submit", function(e) {
   window.location.href = "dashboard.html";
 });
 </script>
+<script>
+document.getElementById("tutorForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const tutorUser = {
+    name: name,
+    email: email,
+    password: password,
+    role: "tutor"
+  };
+
+  localStorage.setItem("user", JSON.stringify(tutorUser));
+
+  window.location.href = "../dashboard.html";
+});
+</script>
+  <script>
+document.getElementById("sessionForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (!user || user.role !== "tutor") return;
+
+  const sessions = JSON.parse(localStorage.getItem("sessions")) || [];
+
+  const newSession = {
+    title: document.getElementById("title").value.trim(),
+    date: document.getElementById("date").value,
+    time: document.getElementById("time").value,
+    description: document.getElementById("description").value.trim(),
+    tutor: user.username
+  };
+
+  sessions.push(newSession);
+  localStorage.setItem("sessions", JSON.stringify(sessions));
+
+  window.location.href = "schedule.html";
+});
+</script>
 </body>
 </html>
