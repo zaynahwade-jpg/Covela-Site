@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covela — Tutor Dashboard</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- Redirect if not signed in or not a tutor -->
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+if (!user) window.location.href = "signin.html";
+if (user.role !== "tutor") window.location.href = "dashboard.html.html";
+</script>
+
+<header class="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">Covela</a>
+
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <span id="dashboardLink"></span>
+      <a href="schedule.html">Calendar</a>
+      <a href="resources/index.html">Material</a>
+      <a href="tutors.html">Tutors</a>
+    </div>
+
+    <div id="roleCTA"></div>
+  </nav>
+</header>
+
+<main class="dashboard-container">
+
+  <h2 class="dashboard-title">Tutor Dashboard</h2>
+
+  <div class="dashboard-grid">
+
+    <!-- CARD 1: Create Lesson -->
+    <div class="dashboard-card">
+      <h3>Create a Lesson</h3>
+      <p>Set up a new tutoring session for students to join.</p>
+      <a href="create-session.html" class="button primary">Create Session</a>
+    </div>
+
+    <!-- CARD 2: Add Material -->
+    <div class="dashboard-card">
+      <h3>Add Material</h3>
+      <p>Upload or link new study resources for students.</p>
+      <a href="materials.html" class="button primary">Add Material</a>
+    </div>
+
+    <!-- CARD 3: Upcoming Sessions -->
+    <div class="dashboard-card">
+      <h3>Upcoming Sessions</h3>
+      <p id="upcomingCount">Loading...</p>
+    </div>
+
+    <!-- CARD 4: Study Hours -->
+    <div class="dashboard-card">
+      <h3>Total Teaching Hours</h3>
+      <p id="hoursCount">0 hours</p>
+    </div>
+
+    <!-- CARD 5: Streak -->
+    <div class="dashboard-card">
+      <h3>Your Streak</h3>
+      <p id="streakCount">0 days</p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ROLE-BASED CTA -->
+<script>
+const cta = document.getElementById("roleCTA");
+
+if (!user) {
+  cta.innerHTML = `<a class="button nav" href="signin.html">Sign In</a>`;
+} else if (user.role === "tutor") {
+  cta.innerHTML = `<a class="button nav" href="create-session.html">Create Session</a>`;
+} else {
+  cta.innerHTML = ``;
+}
+</script>
+
+<!-- NAVBAR DASHBOARD LINK -->
+<script>
+const dash = document.getElementById("dashboardLink");
+
+if (!user) {
+  dash.innerHTML = `<a href="signin.html">Dashboard</a>`;
+} else if (user.role === "tutor") {
+  dash.innerHTML = `<a href="tutor-dashboard.html">Dashboard</a>`;
+} else {
+  dash.innerHTML = `<a href="dashboard.html.html">Dashboard</a>`;
+}
+</script>
+
+<!-- LOAD UPCOMING SESSIONS COUNT -->
+<script>
+const sessions = JSON.parse(localStorage.getItem("sessions")) || [];
+const upcoming = sessions.filter(s => new Date(s.date) >= new Date());
+document.getElementById("upcomingCount").textContent = `${upcoming.length} upcoming`;
+</script>
+
+</body>
+</html>
