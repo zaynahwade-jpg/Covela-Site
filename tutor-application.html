@@ -83,19 +83,33 @@
 document.getElementById("tutorForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const tutorUser = {
+  const user = {
     username: document.getElementById("name").value.trim(),
-    password: document.getElementById("password").value.trim(),
     role: "tutor"
   };
 
-  // Save tutor permanently
-  const tutors = JSON.parse(localStorage.getItem("tutors")) || [];
-  tutors.push(tutorUser);
-  localStorage.setItem("tutors", JSON.stringify(tutors));
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "dashboard.html";
+});
+</script>
+<script>
+document.getElementById("tutorForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  // Redirect to sign-in page
-  window.location.href = "signin.html";
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const tutorUser = {
+    name: name,
+    email: email,
+    password: password,
+    role: "tutor"
+  };
+
+  localStorage.setItem("user", JSON.stringify(tutorUser));
+
+  window.location.href = "../dashboard.html";
 });
 </script>
 </body>
