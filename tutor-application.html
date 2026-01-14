@@ -85,18 +85,20 @@ document.getElementById("tutorForm").addEventListener("submit", function(e) {
 
   const tutorUser = {
     username: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
     password: document.getElementById("password").value.trim(),
     role: "tutor"
   };
 
-  // Log them in
+  // Save tutor permanently
+  const tutors = JSON.parse(localStorage.getItem("tutors")) || [];
+  tutors.push(tutorUser);
+  localStorage.setItem("tutors", JSON.stringify(tutors));
+
+  // Log in the tutor
   localStorage.setItem("user", JSON.stringify(tutorUser));
 
-  // Remember this username as a tutor
-  localStorage.setItem("lastTutorUsername", tutorUser.username);
-
-  window.location.href = "dashboard.html.html";
+  // Redirect
+  window.location.href = "dashboard.html";
 });
 </script>
 </body>
