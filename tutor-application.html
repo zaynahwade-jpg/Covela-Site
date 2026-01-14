@@ -79,40 +79,21 @@
     </p>
   </form>
 </main>
-
 <script>
 document.getElementById("tutorForm").addEventListener("submit", function(e) {
   e.preventDefault();
-
-  const user = {
-    username: document.getElementById("name").value.trim(),
-    role: "tutor"
-  };
-
-  localStorage.setItem("user", JSON.stringify(user));
-  window.location.href = "dashboard.html";
-});
-</script>
-<script>
-document.getElementById("tutorForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
 
   const tutorUser = {
-    name: name,
-    email: email,
-    password: password,
+    username: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    password: document.getElementById("password").value.trim(),
     role: "tutor"
   };
 
   localStorage.setItem("user", JSON.stringify(tutorUser));
 
-  window.location.href = "../dashboard.html";
+  window.location.href = "dashboard.html";
 });
 </script>
- 
 </body>
 </html>
