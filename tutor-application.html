@@ -90,9 +90,15 @@ document.getElementById("tutorForm").addEventListener("submit", function(e) {
     role: "tutor"
   };
 
+  // Save tutor permanently
+  const tutors = JSON.parse(localStorage.getItem("tutors")) || [];
+  tutors.push(tutorUser);
+  localStorage.setItem("tutors", JSON.stringify(tutors));
+
+  // Log in the tutor
   localStorage.setItem("user", JSON.stringify(tutorUser));
 
-  window.location.href = "dashboard.html";
+  window.location.href = "dashboard.html.html";
 });
 </script>
 </body>
