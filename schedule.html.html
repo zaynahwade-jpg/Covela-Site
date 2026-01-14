@@ -17,7 +17,7 @@ Covela </a>
 </ul>
       <div class="navlinks">
         <a href="index.html">Home</a>
-        <span id="dashboardLink"></span>
+        <a href="dashboard.html.html">Dashboard</a>
         <a href="schedule.html.html">Calendar</a>
         <a href="resources/index.html">Material</a>
         <a href="tutors.html">Tutors</a>
@@ -90,22 +90,5 @@ sessions.forEach(session => {
   container.appendChild(card);
 });
 </script>
-  <script>
-const user = JSON.parse(localStorage.getItem("user"));
-const dash = document.getElementById("dashboardLink");
-
-if (!user) {
-  dash.innerHTML = `<a href="signin.html">Dashboard</a>`;
-}
-
-else if (user.role === "tutor") {
-  dash.innerHTML = `<a href="tutor-dashboard.html">Dashboard</a>`;
-}
-
-else {
-  dash.innerHTML = `<a href="dashboard.html.html">Dashboard</a>`;
-}
-</script>
-
 </body>
 </html>
