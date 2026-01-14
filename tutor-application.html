@@ -90,13 +90,11 @@ document.getElementById("tutorForm").addEventListener("submit", function(e) {
     role: "tutor"
   };
 
-  // Save tutor permanently
-  const tutors = JSON.parse(localStorage.getItem("tutors")) || [];
-  tutors.push(tutorUser);
-  localStorage.setItem("tutors", JSON.stringify(tutors));
-
-  // Log in the tutor
+  // Log them in
   localStorage.setItem("user", JSON.stringify(tutorUser));
+
+  // Remember this username as a tutor
+  localStorage.setItem("lastTutorUsername", tutorUser.username);
 
   window.location.href = "dashboard.html.html";
 });
