@@ -41,20 +41,10 @@ document.getElementById("signinForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value.trim();
 
-  // Get the last tutor username (if any)
-  const lastTutorUsername = localStorage.getItem("lastTutorUsername");
-
-  let role;
-
-  if (lastTutorUsername && username === lastTutorUsername) {
-    // If this username matches the tutor we created, treat as tutor
-    role = "tutor";
-  } else {
-    // Everyone else is a student
-    role = "student";
-  }
+  // Presentation mock logic:
+  // If username contains "tutor", sign in as tutor
+  let role = username.toLowerCase().includes("tutor") ? "tutor" : "student";
 
   const user = { username, role };
 
