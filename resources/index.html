@@ -13,18 +13,19 @@
   <!-- header -->
    <header class="header">
  <nav class="nav" aria-label="Main">
-     <a href="../index.html" class="logo">
-  <img src="../assets/img/logo-atom.png" alt="Covela logo">
-  Covela
-</a>
+      <a href="index.html" class="logo">
+  <img src="assets/img/logo-atom.png" alt="Covela logo">
+Covela </a>
       <div class="navlinks">
-  <a href="../index.html">Home</a>
-   <a href="../dashboard.html.html">Dashboard</a>
-  <a href="../schedule.html.html">Calendar</a>
-  <a href="index.html" class="active">Material</a>
-  <a href="../tutors.html">Tutors</a>
-</div>
-     <div id="roleCTA"></div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html.html">Dashboard</a>
+        <a href="schedule.html.html">Calendar</a>
+        <a href="resources/index.html">Material</a>
+        <a href="tutors.html">Tutors</a>
+      </div>
+      <div class="cta">
+        <a class="button nav" href="signup.html">Sign Up</a>
+      </div>
     </nav>
   </header>
 
@@ -168,8 +169,18 @@
     </ul>
   </section>
      <div id="addMaterial"></div>
-     <p class="resource-disclaimer">
-  All external resources are the property of their respective organizations. Covela curates these links for educational use and does not claim ownership.
-</p>
-</main>    
+</main>
+    <script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user && user.role === "tutor") {
+  document.getElementById("addMaterial").innerHTML = `
+    <button class="button primary" onclick="addMaterial()">Add Material</button>
+  `;
+}
+
+function addMaterial() {
+  alert("In a real system, this would upload or link new material.");
+}
+</script>
 </body></html>
