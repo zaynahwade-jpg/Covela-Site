@@ -205,14 +205,5 @@ document.getElementById("materialForm").addEventListener("submit", function(e) {
   location.reload();
 });
 </script>
-    <script>
-const materials = JSON.parse(localStorage.getItem("materials")) || [];
-const list = document.getElementById("materialList");
-
-materials.forEach(m => {
-  const item = document.createElement("li");
-  item.innerHTML = `<a href="${m.url}" target="_blank">${m.title}</a> <span>by ${m.addedBy}</span>`;
-  list.appendChild(item);
-});
-</script>
+    
 </body></html>
