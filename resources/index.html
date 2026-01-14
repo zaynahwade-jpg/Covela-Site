@@ -186,4 +186,33 @@ function addMaterial() {
   alert("In a real system, this would upload or link new material.");
 }
 </script>
+    <script>
+document.getElementById("materialForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (!user || user.role !== "tutor") return;
+
+  const materials = JSON.parse(localStorage.getItem("materials")) || [];
+
+  materials.push({
+    title: document.getElementById("materialTitle").value.trim(),
+    url: document.getElementById("materialURL").value.trim(),
+    addedBy: user.username
+  });
+
+  localStorage.setItem("materials", JSON.stringify(materials));
+  location.reload();
+});
+</script>
+    <script>
+const materials = JSON.parse(localStorage.getItem("materials")) || [];
+const list = document.getElementById("materialList");
+
+materials.forEach(m => {
+  const item = document.createElement("li");
+  item.innerHTML = `<a href="${m.url}" target="_blank">${m.title}</a> <span>by ${m.addedBy}</span>`;
+  list.appendChild(item);
+});
+</script>
 </body></html>
