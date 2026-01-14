@@ -63,7 +63,8 @@ if (!user) {
   cta.innerHTML = ``;
 }
 </script>
-  <script>
+ <div id="sessionList"></div> 
+ <script>
 const sessions = JSON.parse(localStorage.getItem("sessions")) || [];
 const container = document.getElementById("sessionList");
 
@@ -78,6 +79,13 @@ sessions.forEach(session => {
     <p><strong>Tutor:</strong> ${session.tutor}</p>
     <p>${session.description}</p>
   `;
+
+  // ⭐ ADD THIS — nothing else changes
+  if (session.link) {
+    card.innerHTML += `
+      <p><a href="${session.link}" target="_blank">Join Meeting</a></p>
+    `;
+  }
 
   container.appendChild(card);
 });
