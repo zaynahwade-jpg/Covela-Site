@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Covela — Create Session</title>
 
-  <!-- Your main CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
-<!-- Redirect if not signed in or not a tutor -->
+
 <script>
 const user = JSON.parse(localStorage.getItem("user"));
 if (!user) window.location.href = "signin.html";
 if (user.role !== "tutor") window.location.href = "dashboard.html";
 </script>
 
-<!-- HEADER (same as your other pages) -->
+
 <header class="header">
   <nav class="nav">
     <div class="logo">
@@ -33,7 +32,6 @@ if (user.role !== "tutor") window.location.href = "dashboard.html";
       <a href="tutors.html">Tutors</a>
     </div>
 
-    <!-- Role-based CTA placeholder -->
     <div id="roleCTA"></div>
   </nav>
 </header>
@@ -53,7 +51,6 @@ if (user.role !== "tutor") window.location.href = "dashboard.html";
   </form>
 </main>
 
-<!-- SAVE SESSION LOGIC -->
 <script>
 document.getElementById("sessionForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -76,7 +73,7 @@ document.getElementById("sessionForm").addEventListener("submit", function(e) {
 });
 </script>
 
-<!-- ROLE-BASED CTA SCRIPT -->
+
 <script>
 const cta = document.getElementById("roleCTA");
 
